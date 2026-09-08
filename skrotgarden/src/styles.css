@@ -1,0 +1,149 @@
+:root {
+  --bg: #1e2a38;
+  --ink: #fff;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* Fast designyta (1600x1000) som skalas till skärmen. */
+.stage-wrap {
+  position: fixed;
+  inset: 0;
+  touch-action: none;
+}
+
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  animation: scene-in 400ms ease-out both;
+}
+
+@keyframes scene-in {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.scene-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.abs {
+  position: absolute;
+}
+
+.icon-btn {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 120ms ease-out;
+  touch-action: manipulation;
+}
+
+.icon-btn img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 6px 0 rgba(0, 0, 0, 0.25));
+}
+
+.icon-btn:active {
+  transform: scale(0.9);
+}
+
+.icon-btn.active {
+  transform: scale(1.12);
+}
+
+.icon-btn.active img {
+  filter: drop-shadow(0 0 12px #fff) drop-shadow(0 6px 0 rgba(0, 0, 0, 0.25));
+}
+
+.debug-label {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  font-size: 18px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Porträttläge: visa "vrid enheten". */
+.rotate-hint {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--bg);
+  align-items: center;
+  justify-content: center;
+}
+
+.rotate-hint img {
+  width: 40vw;
+  max-width: 256px;
+  animation: rotate-hint 1.6s ease-in-out infinite;
+}
+
+@keyframes rotate-hint {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (orientation: portrait) {
+  .rotate-hint {
+    display: flex;
+  }
+}
