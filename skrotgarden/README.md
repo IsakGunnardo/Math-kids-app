@@ -39,6 +39,8 @@ Ingen fil över 200 rader. Rendering är skild från speldata.
 - Delmål på banan ger nya skruvar: första backen, hoppet, stora backen (1 var)
   och målflaggan (2). Räknas en gång per besök på banan.
 - Knappen för nästa rimliga steg pulserar. Inga fail-states.
+- Körning: gas/broms-knappar, piltangenter, eller lutning av plattan (knapp i körscenen,
+  iOS frågar om tillstånd första gången).
 
 ## Assets
 Se [ASSETS.md](./ASSETS.md). Platshållare är SVG; droppa in en PNG med samma

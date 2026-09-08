@@ -6,6 +6,8 @@ import { IconButton } from '../components/IconButton.tsx';
 import { Sprite } from '../components/Sprite.tsx';
 import { DriveSession } from '../systems/driveLoop.ts';
 import { canDrive, computeCarStats } from '../systems/carStats.ts';
+import { TiltControl } from '../systems/tilt.ts';
+import { audio } from '../systems/audio.ts';
 
 const KEYS_GAS = new Set(['ArrowRight', 'ArrowUp', 'KeyD', 'KeyW']);
 const KEYS_BRAKE = new Set(['ArrowLeft', 'ArrowDown', 'KeyA', 'KeyS', 'Space']);
@@ -21,7 +23,26 @@ export function DriveScene() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const session = useRef<DriveSession | null>(null);
   const [finished, setFinished] = useState(false);
+  const [tiltOn, setTiltOn] = useState(false);
+  const tilt = useRef(new TiltControl());
   const drivable = canDrive(computeCarStats(car));
+
+  const toggleTilt = async () => {
+    const t = tilt.current;
+    if (t.active) {
+      t.stop();
+      setTiltOn(false);
+      return;
+    }
+    const ok = await t.start();
+    setTiltOn(ok);
+    audio.play(ok ? 'snap' : 'nope', { volume: 0.6 });
+  };
+
+  useEffect(() => {
+    const t = tilt.current;
+    return () => t.stop();
+  }, []);
 
   useEffect(() => {
     const ctx = canvasRef.current?.getContext('2d');
@@ -46,8 +67,14 @@ export function DriveScene() {
     const up = key(false);
     window.addEventListener('keydown', down);
     window.addEventListener('keyup', up);
+    const t = tilt.current;
+    const syncTilt = setInterval(() => {
+      s.tilt.gas = t.input.gas;
+      s.tilt.brake = t.input.brake;
+    }, 50);
     return () => {
       s.stop();
+      clearInterval(syncTilt);
       window.removeEventListener('keydown', down);
       window.removeEventListener('keyup', up);
     };
@@ -67,6 +94,9 @@ export function DriveScene() {
       />
       <HoldButton icon="btn_brake" label="Broms" x={40} y={STAGE.height - 200} onDown={setInput('brake', true)} onUp={setInput('brake', false)} />
       <HoldButton icon="btn_gas" label="Gas" x={230} y={STAGE.height - 200} onDown={setInput('gas', true)} onUp={setInput('gas', false)} />
+      {TiltControl.supported() && (
+        <IconButton icon="btn_tilt" label={tiltOn ? 'Lutning av' : 'Luta för att köra'} x={1180 - 280} y={24} size={120} active={tiltOn} onPress={() => void toggleTilt()} />
+      )}
       <IconButton
         icon="btn_reset"
         label="Börja om"

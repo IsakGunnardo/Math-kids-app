@@ -35,6 +35,7 @@ const glyphs = {
   btn_reset: '<path d="M96 64 A32 32 0 1 1 72 33" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/><path d="M70 14 L92 36 L64 46 Z" fill="#fff"/>',
   btn_save: '<path d="M64 108 L28 72 A20 20 0 0 1 64 40 A20 20 0 0 1 100 72 Z" fill="#e91e63" stroke="#000" stroke-width="4"/>',
   btn_sound: '<path d="M28 50 L48 50 L72 30 L72 98 L48 78 L28 78 Z" fill="#fff"/><path d="M84 46 Q100 64 84 82" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>',
+  btn_tilt: '<rect x="30" y="40" width="68" height="48" rx="8" fill="#ddd" stroke="#000" stroke-width="4" transform="rotate(-18 64 64)"/><path d="M22 100 Q64 118 106 100" fill="none" stroke="#f1c40f" stroke-width="8" stroke-linecap="round"/>',
   token: '<polygon points="48,8 84,28 84,68 48,88 12,68 12,28" fill="#f1c40f" stroke="#000" stroke-width="4"/><circle cx="48" cy="48" r="14" fill="#7a5c00"/>',
   rotate: '<rect x="48" y="28" width="160" height="200" rx="20" fill="#333" stroke="#fff" stroke-width="8"/><path d="M200 120 A80 80 0 0 1 128 220" fill="none" stroke="#f1c40f" stroke-width="12" stroke-linecap="round"/>',
 };

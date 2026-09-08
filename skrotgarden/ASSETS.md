@@ -113,6 +113,7 @@ Rund/rundad form, tydlig symbol, ingen text.
 | `ui/btn_reset.png` | 128×128 | Knapp: börja om | Rund pil. | ⬜ |
 | `ui/btn_save.png` | 128×128 | Knapp: spara bil | Stjärna/hjärta. | ⬜ |
 | `ui/btn_sound.png` | 128×128 | Knapp: ljud på/av | Högtalare. | ⬜ |
+| `ui/btn_tilt.png` | 128×128 | Knapp: lutningsstyrning på/av | Lutad surfplatta med pil. | ⬜ |
 | `ui/token.png` | 96×96 | Plock-polett (en skruv = en del att plocka) | Glansig skruv/mutter. Visas i rad uppe till vänster. | ⬜ |
 | `ui/rotate.png` | 256×256 | Vrid enheten (visas i porträttläge) | Surfplatta som roterar till landskap. | ⬜ |
 

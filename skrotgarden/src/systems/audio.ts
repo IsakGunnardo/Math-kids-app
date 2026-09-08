@@ -24,6 +24,16 @@ async function fetchBytes(url: string): Promise<ArrayBuffer> {
   return res.arrayBuffer();
 }
 
+/** Äldre Safari saknar promise-formen av decodeAudioData. */
+function decode(ctx: AudioContext, bytes: ArrayBuffer): Promise<AudioBuffer> {
+  return new Promise((resolve, reject) => {
+    const maybe = ctx.decodeAudioData(bytes, resolve, reject);
+    if (maybe && typeof (maybe as Promise<AudioBuffer>).then === 'function') {
+      (maybe as Promise<AudioBuffer>).then(resolve, reject);
+    }
+  });
+}
+
 /**
  * Enkel Web Audio-spelare. Väcks av första pekningen (iOS kräver det),
  * laddar alla ljud i bakgrunden och spelar sedan utan fördröjning.
@@ -52,9 +62,12 @@ class AudioSystem {
   private async load(id: string) {
     if (!this.ctx || this.buffers.has(id)) return;
     for (const ext of ['mp3', 'wav'] as const) {
+      const url = sfxUrl(id, ext);
+      // Inbäddat läge: prova bara format som faktiskt bäddats in.
+      if (window.__SKROT_ASSETS__ && !url.startsWith('data:')) continue;
       try {
-        const bytes = await fetchBytes(sfxUrl(id, ext));
-        const buf = await this.ctx.decodeAudioData(bytes);
+        const bytes = await fetchBytes(url);
+        const buf = await decode(this.ctx, bytes);
         this.buffers.set(id, buf);
         return;
       } catch {

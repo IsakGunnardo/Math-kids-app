@@ -55,6 +55,7 @@ export const UI: ImageAsset[] = [
   ['btn_reset', 'Knapp: börja om', 'Rund pil.'],
   ['btn_save', 'Knapp: spara bil', 'Stjärna/hjärta.'],
   ['btn_sound', 'Knapp: ljud på/av', 'Högtalare.'],
+  ['btn_tilt', 'Knapp: lutningsstyrning på/av', 'Lutad surfplatta med pil.'],
 ].map(([id, label, note]) => ({
   path: `ui/${id}`,
   kind: 'ui' as const,

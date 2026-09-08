@@ -38,4 +38,4 @@ export const CHECKPOINTS: { x: number; picks: number }[] = [
   { x: 10600, picks: 2 }, // målflaggan
 ];
 
-export const START_PICKS = 3;
+export const START_PICKS = 4;

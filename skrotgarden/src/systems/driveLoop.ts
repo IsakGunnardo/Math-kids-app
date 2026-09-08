@@ -19,6 +19,8 @@ const STEP = 1000 / 60;
 export class DriveSession {
   readonly world: DriveWorld;
   readonly input: DriveInput = { gas: false, brake: false };
+  /** Extra inmatning från lutning; slås ihop med knappar och tangenter. */
+  readonly tilt: DriveInput = { gas: false, brake: false };
   private particles = new Particles();
   private quirks: QuirkState;
   private cam: Camera = { x: 0, y: -STAGE.height * 0.6 };
@@ -61,9 +63,13 @@ export class DriveSession {
     if (this.stopped || !this.imgs) return;
     this.acc = Math.min(this.acc + (now - this.last), STEP * 4);
     this.last = now;
+    const input: DriveInput = {
+      gas: this.input.gas || this.tilt.gas,
+      brake: this.input.brake || this.tilt.brake,
+    };
     while (this.acc >= STEP) {
-      stepWorld(this.world, this.input);
-      updateQuirks(this.quirks, this.world, this.input, STEP / 1000, this.particles);
+      stepWorld(this.world, input);
+      updateQuirks(this.quirks, this.world, input, STEP / 1000, this.particles);
       this.particles.update(STEP / 1000);
       this.time += STEP / 1000;
       this.acc -= STEP;
@@ -79,8 +85,9 @@ export class DriveSession {
     const w = this.world;
     if (!w.chassis || !w.wheels.length || w.stats.power <= 0) return;
     const speed = Math.abs(w.chassis.velocity.x);
-    const rate = 0.6 + Math.min(1.4, speed / 5) + (this.input.gas ? 0.2 : 0);
-    audio.loop('engine', { rate, volume: this.input.gas ? 0.45 : 0.2 });
+    const gas = this.input.gas || this.tilt.gas;
+    const rate = 0.6 + Math.min(1.4, speed / 5) + (gas ? 0.2 : 0);
+    audio.loop('engine', { rate, volume: gas ? 0.45 : 0.2 });
   }
 
   private checkProgress() {
