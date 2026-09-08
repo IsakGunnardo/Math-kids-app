@@ -39,6 +39,6 @@ basnamn så används den automatiskt.
 ## Byggordning
 1. ✅ Skelett + scenväxling + platshållar-assets + ASSETS.md
 2. ✅ Garaget: inventarie, drag & drop, snap, spara/ladda
-3. Körningen: Matter.js, bana, egenskaper från delar
+3. ✅ Körningen: Matter.js, bana, egenskaper från delar
 4. Skrotgården: plocka delar, progression
 5. Ljud, quirks, polish

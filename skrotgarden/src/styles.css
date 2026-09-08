@@ -147,3 +147,21 @@ img {
     display: flex;
   }
 }
+
+.hold-btn:active,
+.hold-btn.held {
+  transform: scale(0.9);
+}
+
+.cheer {
+  animation: cheer 600ms ease-in-out infinite alternate;
+}
+
+@keyframes cheer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
