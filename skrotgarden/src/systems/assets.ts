@@ -4,14 +4,31 @@
  */
 const BASE = `${import.meta.env.BASE_URL}assets/`;
 
+/**
+ * Enfilsbygget (scripts/build-single.mjs) bäddar in alla assets som data-URL:er
+ * i window.__SKROT_ASSETS__ så spelet kan köras som en ensam HTML-fil.
+ */
+declare global {
+  interface Window {
+    __SKROT_ASSETS__?: Record<string, string>;
+  }
+}
+
+function resolve(rel: string): string {
+  return window.__SKROT_ASSETS__?.[rel] ?? `${BASE}${rel}`;
+}
+
 export type ImgExt = 'png' | 'svg';
 
 export function assetUrl(path: string, ext: ImgExt = 'png'): string {
-  return `${BASE}${path}.${ext}`;
+  const embedded = window.__SKROT_ASSETS__;
+  // Inbäddat läge: hoppa direkt till SVG om ingen PNG bäddats in (inga 404:or).
+  if (embedded && ext === 'png' && !embedded[`${path}.png`]) return resolve(`${path}.svg`);
+  return resolve(`${path}.${ext}`);
 }
 
 export function sfxUrl(id: string, ext: 'wav' | 'mp3' = 'wav'): string {
-  return `${BASE}sfx/${id}.${ext}`;
+  return resolve(`sfx/${id}.${ext}`);
 }
 
 const cache = new Map<string, Promise<HTMLImageElement>>();
