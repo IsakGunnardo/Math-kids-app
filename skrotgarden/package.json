@@ -13,7 +13,8 @@
     "gen:sfx": "node scripts/gen-sfx.mjs",
     "gen": "npm run gen:assets && npm run gen:sfx",
     "gen:prompts": "node scripts/gen-prompts.mjs",
-    "import:art": "node scripts/import-art.mjs"
+    "import:art": "node scripts/import-art.mjs",
+    "apply:art": "node scripts/apply-art.mjs"
   },
   "dependencies": {
     "matter-js": "^0.20.0",

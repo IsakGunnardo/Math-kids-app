@@ -52,3 +52,11 @@ basnamn så används den automatiskt.
 3. ✅ Körningen: Matter.js, bana, egenskaper från delar
 4. ✅ Skrotgården: plocka delar, progression
 5. ✅ Ljud, quirks, polish
+
+## Riktig grafik från Higgsfield
+Tio bilder är genererade (bakgrunder + sprite-ark), se `scripts/art-sheets.json`.
+Sandlådan kan inte hämta dem från Higgsfields CDN, så:
+1. Ladda ner de tio bilderna från Higgsfield-galleriet till en mapp.
+2. `npm run apply:art -- <mappen>` – klipper arken, gör magenta transparent,
+   skalar allt till rätt mått och lägger PNG:erna i `public/assets/`.
+3. `npm run gen:assets && npm run build:single`.

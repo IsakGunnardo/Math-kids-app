@@ -1,0 +1,17 @@
+[
+  { "file": "sky", "job": "7499028d-948b-4bd4-ab61-136375798d09", "kind": "bg", "asset": "bg/track_sky" },
+  { "file": "yard", "job": "6797a776-db62-43da-b65a-8e14d7e568dd", "kind": "bg", "asset": "bg/yard" },
+  { "file": "garage", "job": "75deabb3-1c2f-4492-b663-c81e62c77546", "kind": "bg", "asset": "bg/garage" },
+  { "file": "hills", "job": "6a1efa85-a9e0-4eaa-a85b-a17ac94dbdeb", "kind": "key", "asset": "bg/track_hills" },
+  { "file": "ground", "job": "29e9c2f9-d322-4375-a95f-f58144cb0550", "kind": "bg", "asset": "bg/track_ground" },
+  { "file": "chassis", "job": "484deea8-1133-4cd3-be8b-e3aa41bedca6", "kind": "sheet", "rows": 2,
+    "assets": ["parts/chassis_rost", "parts/chassis_badkar", "parts/chassis_lada", "parts/chassis_tunna", "parts/chassis_kanot", "parts/chassis_buss"] },
+  { "file": "wheels", "job": "6d2bc40e-37c4-4289-9e45-a942771c20f8", "kind": "sheet", "rows": 2,
+    "assets": ["parts/wheel_cykel", "parts/wheel_traktor", "parts/wheel_vagn", "parts/wheel_ost", "parts/wheel_klump", "parts/wheel_skate", "parts/wheel_fjader", "parts/wheel_kvarnsten"] },
+  { "file": "motors", "job": "26aab657-4216-4c42-9b47-c0bcca7771fe", "kind": "sheet", "rows": 2,
+    "assets": ["parts/motor_gummiband", "parts/motor_hamster", "parts/motor_moped", "parts/motor_anga", "parts/motor_raket", "parts/motor_flakt"] },
+  { "file": "characters", "job": "33409076-52be-4f98-8ddd-e8c06639ed3e", "kind": "sheet", "rows": 2,
+    "assets": ["char/skruvis_idle", "char/skruvis_wave", "char/skruvis_cheer", "char/skruvis_think", "char/mira_idle", "char/mira_wave", "char/mira_cheer", "char/mira_think"] },
+  { "file": "piles", "job": "f79ec210-a8c2-44ca-b7c0-f37f35792080", "kind": "sheet", "rows": 2,
+    "assets": ["props/pile_chassis", "props/pile_wheel", "props/pile_motor", "props/pile_steering", "props/pile_seat", "props/pile_light", "props/pile_roof", "props/pile_extra"] }
+]
