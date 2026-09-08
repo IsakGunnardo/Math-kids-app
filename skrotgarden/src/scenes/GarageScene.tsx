@@ -1,69 +1,99 @@
+import { useMemo } from 'react';
 import { Sprite } from '../components/Sprite.tsx';
+import { CarView } from '../components/CarView.tsx';
+import { DragGhost } from '../components/DragGhost.tsx';
+import { Inventory } from '../components/Inventory.tsx';
+import { SavedShelf } from '../components/SavedShelf.tsx';
+import { IconButton } from '../components/IconButton.tsx';
+import { useDrag, type Drag } from '../components/useDrag.ts';
 import { useGame } from '../state/store.ts';
-import { getPart } from '../data/parts.ts';
-import { SLOTS } from '../data/slots.ts';
-
-/** Var bilen står i garaget (chassi-spritens övre vänstra hörn). */
-export const CAR_ORIGIN = { x: 420, y: 300 };
+import { getChassis, getPart } from '../data/parts.ts';
+import type { MountKey } from '../data/types.ts';
+import { canDrive, computeCarStats } from '../systems/carStats.ts';
+import { dismantle, mount, setChassis, unmount, type Garage } from '../systems/build.ts';
+import { CAR_ORIGIN, CAR_SCALE, findSnap, mountTargets } from '../systems/garageLayout.ts';
+import './garage.css';
 
 /**
- * Steg 1: visar garaget, en tom bilplats och inventariet som en rad.
- * Drag & drop och snap kommer i steg 2.
+ * Garaget: dra delar från raden längst ner till bilen. Delar snappar mot
+ * lediga fästen som passar; fel del går helt enkelt inte att släppa.
  */
 export function GarageScene() {
+  const car = useGame((s) => s.car);
   const inventory = useGame((s) => s.inventory);
+  const savedCars = useGame((s) => s.savedCars);
+  const setGarage = useGame((s) => s.setGarage);
+  const saveCar = useGame((s) => s.saveCar);
+  const loadCar = useGame((s) => s.loadCar);
+
+  const chassis = getChassis(car.chassis);
+  const targets = useMemo(() => mountTargets(chassis), [chassis]);
+  const stats = useMemo(() => computeCarStats(car), [car]);
+
+  const { drag, start } = useDrag({
+    findSnap: (slot, x, y) => findSnap(slot, x, y, targets),
+    onDrop: (d: Drag) => {
+      let g: Garage = { car, inventory };
+      // Delar som dras från bilen tas först loss så de kan monteras om.
+      if (d.source.kind === 'car') {
+        g = d.source.key === 'chassis' ? dismantle(g) : unmount(g, d.source.key);
+      }
+      if (d.snap) {
+        g = d.snap.key === 'chassis' ? setChassis(g, d.partId) : mount(g, d.partId, d.snap.key as MountKey);
+      }
+      setGarage(g);
+    },
+  });
+
+  const draggingIndex = drag?.source.kind === 'inventory' ? drag.source.index : null;
+  const hiddenKey = drag?.source.kind === 'car' ? drag.source.key : null;
 
   return (
     <div className="scene">
       <Sprite sprite="bg/garage" className="scene-bg" />
 
-      <div
-        className="abs"
-        style={{
-          left: CAR_ORIGIN.x,
-          top: CAR_ORIGIN.y,
-          width: SLOTS.chassis.width,
-          height: SLOTS.chassis.height,
-          border: '6px dashed rgba(255,255,255,0.5)',
-          borderRadius: 40,
+      <SavedShelf cars={savedCars} current={car} onLoad={loadCar} />
+
+      <CarView
+        build={car}
+        origin={CAR_ORIGIN}
+        scale={CAR_SCALE}
+        interaction={{
+          hotSlot: drag?.slot ?? null,
+          hiddenKey,
+          onPartDown: (key, partId, e) => {
+            const slot = key === 'chassis' ? 'chassis' : targets.find((t) => t.key === key)!.slot;
+            start(partId, slot, { kind: 'car', key }, e);
+          },
         }}
       />
 
-      <div
-        className="abs"
-        style={{
-          left: 40,
-          right: 40,
-          bottom: 30,
-          height: 180,
-          display: 'flex',
-          gap: 16,
-          alignItems: 'center',
-          padding: '0 16px',
-          background: 'rgba(0,0,0,0.25)',
-          borderRadius: 24,
-          overflowX: 'auto',
-        }}
-      >
-        {inventory.map((id, i) => {
-          const part = getPart(id);
-          if (!part) return null;
-          return (
-            <Sprite
-              key={`${id}-${i}`}
-              sprite={part.sprite}
-              alt={part.name}
-              style={{ height: 140, width: 'auto', flex: '0 0 auto' }}
-            />
-          );
-        })}
-      </div>
+      <IconButton
+        icon="btn_save"
+        label="Spara bilen"
+        x={1090}
+        y={470}
+        size={130}
+        active={false}
+        onPress={saveCar}
+      />
 
       <Sprite
-        sprite="char/mira_think"
+        sprite={canDrive(stats) ? 'char/mira_cheer' : 'char/mira_think'}
         className="abs"
-        style={{ left: 60, top: 120, width: 240, height: 320 }}
+        style={{ left: 1250, top: 280, width: 240, height: 320 }}
       />
+
+      <Inventory
+        items={inventory}
+        draggingIndex={draggingIndex}
+        onStart={(index, partId, e) => {
+          const part = getPart(partId);
+          if (part) start(partId, part.slot, { kind: 'inventory', index }, e);
+        }}
+      />
+
+      {drag && <DragGhost drag={drag} />}
       <div className="debug-label">Garaget</div>
     </div>
   );

@@ -25,4 +25,17 @@ export function partsInSlot(slot: SlotId): Part[] {
 }
 
 /** Delar man börjar med, så att garaget inte är tomt första gången. */
-export const STARTER_KIT: string[] = ['lada', 'cykel', 'gummiband', 'styre', 'pall'];
+export const STARTER_KIT: string[] = [
+  'lada',
+  'rost',
+  'cykel',
+  'cykel',
+  'vagn',
+  'gummiband',
+  'hamster',
+  'styre',
+  'pall',
+  'ficklampa',
+  'paraply',
+  'tuta',
+];

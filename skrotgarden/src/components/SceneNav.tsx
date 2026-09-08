@@ -9,14 +9,14 @@ const NAV: { scene: SceneId; icon: string; label: string }[] = [
   { scene: 'drive', icon: 'btn_drive', label: 'Provkör' },
 ];
 
-/** Tre stora knappar nere till höger som byter scen. */
+/** Tre stora knappar uppe till höger som byter scen. */
 export function SceneNav() {
   const scene = useGame((s) => s.scene);
   const setScene = useGame((s) => s.setScene);
   const size = 120;
   const gap = 20;
   const x0 = STAGE.width - NAV.length * (size + gap);
-  const y = STAGE.height - size - 24;
+  const y = 24;
 
   return (
     <>

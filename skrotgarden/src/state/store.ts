@@ -1,18 +1,21 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { CarBuild, MountKey, SceneId } from '../data/types.ts';
+import type { CarBuild, SceneId } from '../data/types.ts';
 import { STARTER_KIT } from '../data/parts.ts';
+import { loadBuild, sameBuild, type Garage } from '../systems/build.ts';
 
 export interface SavedCar {
   id: string;
-  name: string;
   build: CarBuild;
   savedAt: number;
 }
 
+/** Hyllan i garaget har plats för så här många sparade bilar. */
+export const MAX_SAVED = 6;
+
 export interface GameState {
   scene: SceneId;
-  /** Del-id:n som ligger i inventariet (samma id kan förekomma flera gånger). */
+  /** Lösa delar. Samma id kan förekomma flera gånger. */
   inventory: string[];
   car: CarBuild;
   savedCars: SavedCar[];
@@ -20,10 +23,11 @@ export interface GameState {
 
   setScene: (scene: SceneId) => void;
   addToInventory: (partId: string) => void;
-  removeFromInventory: (partId: string) => void;
-  setChassis: (partId: string | null) => void;
-  mountPart: (mount: MountKey, partId: string | null) => void;
-  resetCar: () => void;
+  /** Ersätter bil + inventarie atomiskt (resultatet av en garage-operation). */
+  setGarage: (g: Garage) => void;
+  /** Sparar nuvarande bil på hyllan. Dubbletter sparas inte, äldsta ryker om det är fullt. */
+  saveCar: () => void;
+  loadCar: (id: string) => void;
   toggleSound: () => void;
 }
 
@@ -40,23 +44,31 @@ export const useGame = create<GameState>()(
 
       setScene: (scene) => set({ scene }),
       addToInventory: (partId) => set((s) => ({ inventory: [...s.inventory, partId] })),
-      removeFromInventory: (partId) =>
+      setGarage: (g) => set({ car: g.car, inventory: g.inventory }),
+      saveCar: () =>
         set((s) => {
-          const i = s.inventory.indexOf(partId);
-          if (i < 0) return {};
-          return { inventory: [...s.inventory.slice(0, i), ...s.inventory.slice(i + 1)] };
+          if (!s.car.chassis || s.savedCars.some((c) => sameBuild(c.build, s.car))) return {};
+          const entry: SavedCar = { id: `car-${Date.now()}`, build: s.car, savedAt: Date.now() };
+          return { savedCars: [...s.savedCars, entry].slice(-MAX_SAVED) };
         }),
-      setChassis: (partId) => set((s) => ({ car: { ...s.car, chassis: partId } })),
-      mountPart: (mount, partId) =>
+      loadCar: (id) =>
         set((s) => {
-          const parts = { ...s.car.parts };
-          if (partId) parts[mount] = partId;
-          else delete parts[mount];
-          return { car: { ...s.car, parts } };
+          const saved = s.savedCars.find((c) => c.id === id);
+          if (!saved) return {};
+          const g = loadBuild({ car: s.car, inventory: s.inventory }, saved.build);
+          return { car: g.car, inventory: g.inventory };
         }),
-      resetCar: () => set({ car: EMPTY_CAR }),
       toggleSound: () => set((s) => ({ soundOn: !s.soundOn })),
     }),
-    { name: 'skrotgarden-v1' },
+    {
+      name: 'skrotgarden-v1',
+      version: 2,
+      migrate: (state, version) => {
+        const s = (state ?? {}) as Partial<GameState>;
+        // v2: större startkit så garaget går att testa; äldre sparningar nollställs.
+        if (version < 2) return { ...s, inventory: [...STARTER_KIT], car: EMPTY_CAR, savedCars: [] };
+        return s;
+      },
+    },
   ),
 );

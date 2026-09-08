@@ -10,7 +10,7 @@ const PILE_SPOTS = [
   { x: 200, y: 680 },
   { x: 560, y: 700 },
   { x: 900, y: 680 },
-  { x: 1200, y: 560 },
+  { x: 1240, y: 640 },
 ];
 
 /**
@@ -32,7 +32,7 @@ export function YardScene() {
       <Sprite
         sprite="char/skruvis_wave"
         className="abs"
-        style={{ left: 1180, top: 60, width: 300, height: 400 }}
+        style={{ left: 700, top: 10, width: 270, height: 360 }}
       />
       <div className="debug-label">Skrotgården</div>
     </div>
