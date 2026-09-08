@@ -11,7 +11,9 @@
     "check": "tsc --noEmit",
     "gen:assets": "node scripts/gen-assets.mjs",
     "gen:sfx": "node scripts/gen-sfx.mjs",
-    "gen": "npm run gen:assets && npm run gen:sfx"
+    "gen": "npm run gen:assets && npm run gen:sfx",
+    "gen:prompts": "node scripts/gen-prompts.mjs",
+    "import:art": "node scripts/import-art.mjs"
   },
   "dependencies": {
     "matter-js": "^0.20.0",
@@ -24,6 +26,7 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.7.0",
+    "sharp": "^0.34.5",
     "typescript": "^5.9.2",
     "vite": "^5.4.21"
   }

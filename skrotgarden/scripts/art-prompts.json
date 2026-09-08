@@ -1,0 +1,1062 @@
+[
+  {
+    "path": "parts/chassis_rost",
+    "width": 512,
+    "height": 256,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Old rusty small car body without wheels, orange-brown rust patches, dented, cheerful Leave empty space along the bottom where wheels will be attached. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/chassis_badkar",
+    "width": 512,
+    "height": 256,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "White enamel bathtub with claw feet removed, used as a car body, blue rim, no wheels Leave empty space along the bottom where wheels will be attached. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/chassis_lada",
+    "width": 512,
+    "height": 256,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Wooden crate car body made of pine planks with nails, no wheels Leave empty space along the bottom where wheels will be attached. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/chassis_tunna",
+    "width": 512,
+    "height": 256,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Blue steel oil barrel lying on its side used as a car body, no wheels Leave empty space along the bottom where wheels will be attached. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/chassis_kanot",
+    "width": 512,
+    "height": 256,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Green wooden canoe used as a long car body, no wheels Leave empty space along the bottom where wheels will be attached. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/chassis_buss",
+    "width": 512,
+    "height": 256,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Long yellow toy bus body with many windows, no wheels Leave empty space along the bottom where wheels will be attached. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_cykel",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Bicycle wheel with thin spokes and a narrow black tire Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_traktor",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Big chunky tractor wheel with deep tread and red hub Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_vagn",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Small pram wheel with white rubber tire and chrome hub Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_ost",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round wheel of yellow cheese with holes, used as a car wheel Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_klump",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Lumpy black rubber ball wheel with knobby grip Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_skate",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Tiny orange skateboard wheel Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_fjader",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Wheel made of a coiled silver spring with a rubber rim Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/wheel_kvarnsten",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heavy grey stone millstone wheel with a square hole Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/motor_gummiband",
+    "width": 192,
+    "height": 160,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Toy motor made of a big wound-up red rubber band on a wooden frame Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/motor_hamster",
+    "width": 192,
+    "height": 160,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Hamster running inside an exercise wheel mounted on a small engine block Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/motor_moped",
+    "width": 192,
+    "height": 160,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Small blue moped engine with a chrome exhaust pipe Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/motor_anga",
+    "width": 192,
+    "height": 160,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Little copper steam boiler with a chimney and pressure gauge Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/motor_raket",
+    "width": 192,
+    "height": 160,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Red and white toy rocket engine with a nozzle at the back Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/motor_flakt",
+    "width": 192,
+    "height": 160,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Big propeller fan in a round cage, like an airboat fan Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/steering_styre",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Bicycle handlebar with a bell and rubber grips Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/steering_ratt",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Classic round car steering wheel, dark red Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/steering_grytlock",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Silver pot lid with a black knob, used as a steering wheel Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/seat_pall",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Small wooden three-legged stool Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/seat_fatolj",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Cozy green armchair with a pillow Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/seat_hink",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Upside-down red plastic bucket used as a seat Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/seat_soffa",
+    "width": 160,
+    "height": 160,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Small striped sofa with cushions Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/light_ficklampa",
+    "width": 96,
+    "height": 96,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Yellow flashlight, beam pointing right Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/light_lykta",
+    "width": 96,
+    "height": 96,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Old brass lantern with a candle inside Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/light_disco",
+    "width": 96,
+    "height": 96,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Sparkling mirror disco ball Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/roof_paraply",
+    "width": 384,
+    "height": 160,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Open striped umbrella seen from the side, red and white Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/roof_plat",
+    "width": 384,
+    "height": 160,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Corrugated tin roof sheet, grey with a few rust spots Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/roof_talt",
+    "width": 384,
+    "height": 160,
+    "aspect_ratio": "16:9",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Small orange camping tent roof Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/extra_tuta",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Brass bulb horn with a red rubber bulb Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/extra_bubbel",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Little bubble machine with a fan and soap bubbles coming out Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/extra_flagga",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Small triangular pennant flag on a pole, blue and yellow Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/extra_radio",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Retro portable radio with an antenna, teal Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/extra_antenn",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Wobbly car antenna with a small ball on top Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "parts/extra_skruvburk",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Glass jar full of loose screws and nuts, lid off Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "bg/yard",
+    "width": 2048,
+    "height": 1280,
+    "aspect_ratio": "3:2",
+    "removeBackground": false,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k"
+    },
+    "prompt": "Wide scene of a friendly scrapyard on a sunny day: wooden fence, blue sky with clouds, sandy ground, a few tires and barrels at the edges, open sandy space in the lower half Wide landscape composition, no characters. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "bg/garage",
+    "width": 2048,
+    "height": 1280,
+    "aspect_ratio": "3:2",
+    "removeBackground": false,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k"
+    },
+    "prompt": "Wide interior of a cozy workshop garage: brick walls, tool shelves along the sides, a big empty concrete floor in the middle, warm light from a window Wide landscape composition, no characters. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "bg/track_sky",
+    "width": 2048,
+    "height": 1280,
+    "aspect_ratio": "3:2",
+    "removeBackground": false,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k"
+    },
+    "prompt": "Wide bright blue sky with soft white cartoon clouds and a warm sun, seamless horizontally Wide landscape composition, no characters. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "bg/track_hills",
+    "width": 2048,
+    "height": 640,
+    "aspect_ratio": "16:9",
+    "removeBackground": false,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k"
+    },
+    "prompt": "Wide rolling green cartoon hills with a few trees and a red cottage, transparent above the hills, seamless horizontally Wide landscape composition, no characters. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "bg/track_ground",
+    "width": 256,
+    "height": 256,
+    "aspect_ratio": "1:1",
+    "removeBackground": false,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k"
+    },
+    "prompt": "Seamless tile of cartoon grass on top and brown soil with little stones below Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/skruvis_idle",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Friendly rusty orange robot mechanic with a screwdriver hand and big round eyes, standing, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/skruvis_wave",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Friendly rusty orange robot mechanic with a screwdriver hand, waving happily, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/skruvis_cheer",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Friendly rusty orange robot mechanic with both arms up cheering, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/skruvis_think",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Friendly rusty orange robot mechanic scratching its head thoughtfully, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/mira_idle",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Cheerful child in a teal overall and an oversized yellow helmet, standing, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/mira_wave",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Cheerful child in a teal overall and an oversized yellow helmet, waving, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/mira_cheer",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Cheerful child in a teal overall and an oversized yellow helmet, jumping with joy, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "char/mira_think",
+    "width": 384,
+    "height": 512,
+    "aspect_ratio": "3:4",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Cheerful child in a teal overall and an oversized yellow helmet, finger on chin thinking, full body Full body visible, feet at the bottom edge, friendly expression. Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_yard",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round game button icon with a heap of scrap parts Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_garage",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round game button icon with a little garage house and a wrench Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_drive",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round game button icon with a small car and speed lines Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_gas",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round green game button icon with a big upward arrow Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_brake",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round red game button icon with a raised open hand Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_reset",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round game button icon with a circular arrow Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_save",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round game button icon with a pink heart Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_sound",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round game button icon with a loudspeaker Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/btn_tilt",
+    "width": 128,
+    "height": 128,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Round game button icon with a tilted tablet and a curved arrow Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/token",
+    "width": 96,
+    "height": 96,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Shiny golden hex nut icon Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "ui/rotate",
+    "width": 256,
+    "height": 256,
+    "aspect_ratio": "1:1",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Icon of a tablet rotating from portrait to landscape with a curved arrow Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_chassis",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of old car bodies and a bathtub Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_wheel",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of assorted wheels and tires Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_motor",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of small engines and gears Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_steering",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of steering wheels and handlebars Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_seat",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of old chairs, stools and cushions Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_light",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of lamps, lanterns and flashlights Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_roof",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of umbrellas, tin sheets and tent cloth Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  },
+  {
+    "path": "props/pile_extra",
+    "width": 320,
+    "height": 256,
+    "aspect_ratio": "4:3",
+    "removeBackground": true,
+    "model": "recraft_v4_1",
+    "params": {
+      "model_type": "standard",
+      "resolution": "1k",
+      "background_color": "#FFFFFF"
+    },
+    "prompt": "Heap of horns, flags, radios and jars of screws Single object, centered, side view facing right, isolated on a solid pure white background, no shadow, no ground. Flat cartoon illustration in the spirit of 1990s Swedish children’s edutainment CD-ROM games: bold dark outlines, warm saturated colors, simple friendly shapes, slight painterly texture. No text, no letters, no logos, no watermark.",
+    "missing": false
+  }
+]
