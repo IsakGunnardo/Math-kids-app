@@ -3,7 +3,7 @@ import type { CarBuild, MountKey, Part } from '../data/types.ts';
 import { SLOTS } from '../data/slots.ts';
 import { getChassis, getPart } from '../data/parts.ts';
 import { computeCarStats, type CarStats } from './carStats.ts';
-import { buildTrack, TRACK_START_X, type Track } from './track.ts';
+import { buildTrack, TRACK_START_X, WALL_X, type Track } from './track.ts';
 
 const { Engine, Bodies, Body, Composite, Constraint } = Matter;
 
@@ -29,6 +29,8 @@ export interface DriveWorld {
   /** Övriga delar (inte hjul) i ritordning, med fästpunkt i spritepixlar. */
   bodyParts: { key: MountKey; part: Part }[];
   upsideDownFrames: number;
+  /** Rendereffekter som quirks slår på. */
+  fx: { jitter: number; wobble: boolean };
 }
 
 function addTrack(world: Matter.World, track: Track) {
@@ -45,9 +47,8 @@ function addTrack(world: Matter.World, track: Track) {
     });
     Composite.add(world, seg);
   }
-  // Stopp vid banans slut så ingen kör ut i tomma intet.
-  const last = pts[pts.length - 1];
-  Composite.add(world, Bodies.rectangle(last.x + 40, last.y - 200, 80, 600, { isStatic: true }));
+  // Stenblock vid banans slut så ingen kör ut i tomma intet.
+  Composite.add(world, Bodies.rectangle(WALL_X, track.groundY(WALL_X) - 90, 160, 180, { isStatic: true, chamfer: { radius: 40 } }));
 }
 
 function buildCar(build: CarBuild, stats: CarStats, x: number, groundY: number) {
@@ -110,7 +111,7 @@ export function createWorld(build: CarBuild): DriveWorld {
       const part = getPart(id);
       return part ? [{ key, part }] : [];
     });
-  return { engine, track, stats, build, car, chassis, wheels, bodyParts, upsideDownFrames: 0 };
+  return { engine, track, stats, build, car, chassis, wheels, bodyParts, upsideDownFrames: 0, fx: { jitter: 0, wobble: false } };
 }
 
 /** Bygger om bilen på plats (efter volt eller reset). */

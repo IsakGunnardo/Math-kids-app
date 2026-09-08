@@ -26,12 +26,14 @@ const KEYS: Point[] = [
   { x: 8200, y: -500 },
   { x: 8600, y: -500 },
   { x: 9900, y: 0 },
-  { x: 11200, y: 0 },
+  { x: 12600, y: 0 },
 ];
 
 export const TRACK_START_X = 300;
 export const FINISH_X = 10600;
-export const TRACK_END_X = 11200;
+/** Här står stenblocket som stoppar bilen. Marken fortsätter en bit bakom. */
+export const WALL_X = 11400;
+export const TRACK_END_X = 12600;
 const SAMPLE = 40;
 
 export interface Track {

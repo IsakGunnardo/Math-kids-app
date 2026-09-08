@@ -4,7 +4,8 @@ import { getChassis, getPart } from '../data/parts.ts';
 import { STAGE } from '../data/assets.ts';
 import { loadImage } from './assets.ts';
 import { BODY_OFFSET_Y, DRIVE_SCALE, type DriveWorld } from './physics.ts';
-import { FINISH_X } from './track.ts';
+import { FINISH_X, WALL_X } from './track.ts';
+import type { Particles } from './particles.ts';
 
 export type ImageMap = Map<string, HTMLImageElement>;
 
@@ -17,7 +18,7 @@ const LAYER: Record<string, number> = { roof: 0, seat: 1, motor: 3, steering: 4,
 
 /** Laddar alla bilder som behövs för att rita världen. */
 export async function loadDriveImages(w: DriveWorld): Promise<ImageMap> {
-  const names = ['bg/track_sky', 'bg/track_hills', 'bg/track_ground'];
+  const names = ['bg/track_sky', 'bg/track_hills', 'bg/track_ground', 'char/mira_idle'];
   const chassis = getChassis(w.build.chassis);
   if (chassis) names.push(chassis.sprite);
   for (const id of Object.values(w.build.parts)) {
@@ -76,6 +77,14 @@ function drawGround(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld
 }
 
 function drawFinish(ctx: CanvasRenderingContext2D, w: DriveWorld) {
+  const wy = w.track.groundY(WALL_X);
+  ctx.fillStyle = '#6d6d6d';
+  ctx.beginPath();
+  ctx.roundRect(WALL_X - 80, wy - 180, 160, 190, 40);
+  ctx.fill();
+  ctx.lineWidth = 8;
+  ctx.strokeStyle = '#3f2d1a';
+  ctx.stroke();
   const y = w.track.groundY(FINISH_X);
   ctx.fillStyle = '#3f2d1a';
   ctx.fillRect(FINISH_X - 6, y - 260, 12, 260);
@@ -88,7 +97,20 @@ function drawFinish(ctx: CanvasRenderingContext2D, w: DriveWorld) {
   ctx.fill();
 }
 
-function drawCar(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld) {
+/** Mira sitter i sätet och guppar mer ju sämre komforten är. */
+function drawDriver(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld, time: number) {
+  const chassis = getChassis(w.build.chassis);
+  const mira = imgs.get('char/mira_idle');
+  if (!chassis || !mira || !w.build.parts.seat || !w.chassis) return;
+  const S = DRIVE_SCALE;
+  const speed = Math.min(1, Math.abs(w.chassis.velocity.x) / 3);
+  const amp = Math.max(0, 9 - w.stats.comfort) * speed * 0.9;
+  const m = chassis.mounts.seat;
+  const bob = Math.sin(time * 14) * amp;
+  ctx.drawImage(mira, m.x * S - 40, m.y * S - 120 + bob, 84, 112);
+}
+
+function drawCar(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld, time: number) {
   const chassisPart = getChassis(w.build.chassis);
   if (!w.chassis || !chassisPart) return;
   const S = DRIVE_SCALE;
@@ -96,7 +118,8 @@ function drawCar(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld) {
   const H = SLOTS.chassis.height * S;
 
   ctx.save();
-  ctx.translate(w.chassis.position.x, w.chassis.position.y);
+  const j = w.fx.jitter;
+  ctx.translate(w.chassis.position.x + (Math.random() - 0.5) * j, w.chassis.position.y + (Math.random() - 0.5) * j);
   ctx.rotate(w.chassis.angle);
   ctx.translate(-W / 2, -H / 2 - BODY_OFFSET_Y);
   const parts = [...w.bodyParts].sort((a, b) => LAYER[a.key] - LAYER[b.key]);
@@ -109,6 +132,7 @@ function drawCar(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld) {
     if (img) ctx.drawImage(img, m.x * S - pw / 2, m.y * S - ph / 2, pw, ph);
   };
   for (const { key, part } of parts) if (LAYER[key] < 2) drawPart(key, part.sprite);
+  drawDriver(ctx, imgs, w, time);
   const chassisImg = imgs.get(chassisPart.sprite);
   if (chassisImg) ctx.drawImage(chassisImg, 0, 0, W, H);
   for (const { key, part } of parts) if (LAYER[key] >= 2) drawPart(key, part.sprite);
@@ -122,18 +146,30 @@ function drawCar(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld) {
     ctx.save();
     ctx.translate(wheel.position.x, wheel.position.y);
     ctx.rotate(wheel.angle);
+    if (w.fx.wobble) {
+      const k = 0.08 * Math.sin(time * 12 + i);
+      ctx.scale(1 + k, 1 - k);
+    }
     ctx.drawImage(img, -r, -r, r * 2, r * 2);
     ctx.restore();
   });
 }
 
 /** Ritar en hel bildruta. */
-export function drawFrame(ctx: CanvasRenderingContext2D, imgs: ImageMap, w: DriveWorld, cam: Camera) {
+export function drawFrame(
+  ctx: CanvasRenderingContext2D,
+  imgs: ImageMap,
+  w: DriveWorld,
+  cam: Camera,
+  particles: Particles,
+  time: number,
+) {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, STAGE.width, STAGE.height);
   drawBackground(ctx, imgs, cam);
   ctx.translate(-cam.x, -cam.y);
   drawGround(ctx, imgs, w, cam);
   drawFinish(ctx, w);
-  drawCar(ctx, imgs, w);
+  drawCar(ctx, imgs, w, time);
+  particles.draw(ctx);
 }

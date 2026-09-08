@@ -12,6 +12,7 @@ import type { MountKey } from '../data/types.ts';
 import { canDrive, computeCarStats } from '../systems/carStats.ts';
 import { dismantle, mount, setChassis, unmount, type Garage } from '../systems/build.ts';
 import { CAR_ORIGIN, CAR_SCALE, findSnap, mountTargets } from '../systems/garageLayout.ts';
+import { audio } from '../systems/audio.ts';
 import './garage.css';
 
 /**
@@ -40,6 +41,9 @@ export function GarageScene() {
       }
       if (d.snap) {
         g = d.snap.key === 'chassis' ? setChassis(g, d.partId) : mount(g, d.partId, d.snap.key as MountKey);
+        audio.play('snap');
+      } else {
+        audio.play(d.source.kind === 'car' ? 'clunk' : 'nope', { volume: 0.6 });
       }
       setGarage(g);
     },
@@ -63,6 +67,7 @@ export function GarageScene() {
           hiddenKey,
           onPartDown: (key, partId, e) => {
             const slot = key === 'chassis' ? 'chassis' : targets.find((t) => t.key === key)!.slot;
+            audio.play('pick', { volume: 0.7 });
             start(partId, slot, { kind: 'car', key }, e);
           },
         }}
@@ -75,7 +80,10 @@ export function GarageScene() {
         y={470}
         size={130}
         active={false}
-        onPress={saveCar}
+        onPress={() => {
+          saveCar();
+          audio.play('sparkle');
+        }}
       />
 
       <Sprite
@@ -89,12 +97,13 @@ export function GarageScene() {
         draggingIndex={draggingIndex}
         onStart={(index, partId, e) => {
           const part = getPart(partId);
-          if (part) start(partId, part.slot, { kind: 'inventory', index }, e);
+          if (!part) return;
+          audio.play('pick', { volume: 0.7 });
+          start(partId, part.slot, { kind: 'inventory', index }, e);
         }}
       />
 
       {drag && <DragGhost drag={drag} />}
-      <div className="debug-label">Garaget</div>
     </div>
   );
 }

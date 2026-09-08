@@ -66,6 +66,16 @@ export const UI: ImageAsset[] = [
 }));
 
 UI.push({
+  path: 'ui/token',
+  kind: 'ui',
+  width: 96,
+  height: 96,
+  label: 'Plock-polett (en skruv = en del att plocka)',
+  color: '#f1c40f',
+  note: 'Glansig skruv/mutter. Visas i rad uppe till vänster.',
+});
+
+UI.push({
   path: 'ui/rotate',
   kind: 'ui',
   width: 256,

@@ -32,6 +32,14 @@ public/assets/ parts/ bg/ char/ ui/ props/ sfx/
 ```
 Ingen fil över 200 rader. Rendering är skild från speldata.
 
+## Spelloop och progression
+- Man börjar med ett litet startkit och tre skruvar (plock).
+- Varje hög på skrotgården ger en slumpad ny del ur sin kategori för en skruv.
+  Hjul kan man ha flera av (upp till fyra likadana), annars en av varje.
+- Delmål på banan ger nya skruvar: första backen, hoppet, stora backen (1 var)
+  och målflaggan (2). Räknas en gång per besök på banan.
+- Knappen för nästa rimliga steg pulserar. Inga fail-states.
+
 ## Assets
 Se [ASSETS.md](./ASSETS.md). Platshållare är SVG; droppa in en PNG med samma
 basnamn så används den automatiskt.
@@ -40,5 +48,5 @@ basnamn så används den automatiskt.
 1. ✅ Skelett + scenväxling + platshållar-assets + ASSETS.md
 2. ✅ Garaget: inventarie, drag & drop, snap, spara/ladda
 3. ✅ Körningen: Matter.js, bana, egenskaper från delar
-4. Skrotgården: plocka delar, progression
-5. Ljud, quirks, polish
+4. ✅ Skrotgården: plocka delar, progression
+5. ✅ Ljud, quirks, polish
